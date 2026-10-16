@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+:root {
+  /* ================================
+     COLORS
+  ================================= */
+
+  --color-primary: #3E2723;
+  --color-primary-dark: #2B1A17;
+  --color-primary-light: #5A3A34;
+
+  --color-secondary: #E6D5C3;
+  --color-secondary-dark: #D5C0A8;
+  --color-secondary-light: #F0E4D7;
+
+  --color-tertiary: #4A5D4E;
+  --color-tertiary-dark: #35463A;
+  --color-tertiary-light: #718274;
+
+  --color-neutral: #FDFCF0;
+  --color-background: #EFEEE3;
+  --color-surface: #F1F0E4;
+  --color-border: #DBDBCF;
+
+  --color-text: #2B2422;
+  --color-text-secondary: #6F6864;
+  --color-text-muted: #8C8782;
+  --color-text-light: #FDFCF2;
+
+  --color-success: #4A5D4E;
+  --color-danger: #C62828;
+  --color-warning: #8A6A3D;
+  --color-info: #6B7280;
+
+  /* ================================
+     FONTS
+  ================================= */
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ================================
+     RADIUS
+  ================================= */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  /* ================================
+     SHADOWS
+  ================================= */
+
+  --shadow-sm: 0 1px 3px rgba(62, 39, 35, 0.08);
+  --shadow-md: 0 4px 12px rgba(62, 39, 35, 0.10);
+  --shadow-lg: 0 8px 24px rgba(62, 39, 35, 0.12);
+
+  /* ================================
+     SPACING
+  ================================= */
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+}
+
+/* =================================
+   GLOBAL RESET
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =================================
+   TYPOGRAPHY
+================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p {
+  margin: 0;
+}
+
+/* =================================
+   FORM ELEMENTS
+================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  background: var(--color-neutral);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(62, 39, 35, 0.10);
+}
+
+/* =================================
+   BUTTON BASE
+================================= */
+
+button {
+  border: 0;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* =================================
+   RESPONSIVE TYPOGRAPHY
+================================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}
